@@ -11,7 +11,7 @@ class FeaturedListViewItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2.7 / 4,
       child: Container(
-        margin: const EdgeInsets.only(left: 12.0,),
+        margin: const EdgeInsets.only(right: 10.0,),
         decoration: BoxDecoration(
           image:  const DecorationImage(
             fit: BoxFit.fill,

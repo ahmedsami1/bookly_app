@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/home_view.dart';
+import 'package:bookly_app/Features/home/presentation/views/home_view.dart';
 import 'package:bookly_app/Features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/constants.dart';
@@ -69,6 +69,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       });
     });
   }
+
 }
 
 

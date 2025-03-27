@@ -45,7 +45,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2),(){
-      GoRouter.of(context).push(AppRouter.kHomeView);
+      if (mounted) {
+        GoRouter.of(context).push(AppRouter.kHomeView);
+      }
       //     transition: Transition.fadeIn, duration: kTransitionDuration);
 
     });
@@ -61,14 +63,8 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       begin: const Offset(0, 4),
       end: Offset.zero,
     ).animate(animationController);
-
     animationController.forward();
 
-    slidingAnimation.addListener(() {
-      setState(() {
-
-      });
-    });
   }
 
 }

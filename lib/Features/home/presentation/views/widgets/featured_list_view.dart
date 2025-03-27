@@ -1,4 +1,5 @@
 import 'package:bookly_app/Features/home/presentation/views/widgets/featured_list_view_item.dart';
+import 'package:bookly_app/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -9,7 +10,7 @@ class FeaturedBooksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 24.0),
+      padding: const EdgeInsets.only(left: kDefaultPadding),
       child: SizedBox(
         height: MediaQuery.of(context).size.height *  0.3,
         child: ListView.builder(

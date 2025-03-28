@@ -7,7 +7,17 @@ class BookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: SafeArea(child: BookDetailsViewBody()),
+        body: SafeArea(
+            child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
+                slivers: [
+                  SliverToBoxAdapter(
+                    child:
+                      BookDetailsViewBody(),
+                  ),
+                ]
+            ),
+        ),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.
 import 'package:bookly_app/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/similar_books_list_view.dart';
+import 'package:bookly_app/core/utils/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +29,7 @@ class BookDetailsViewBody extends StatelessWidget {
         const SizedBox(height: 5,),
         Text(
           'Rudyard Kipling',
-          style: Styles.textStyle20.copyWith(
+          style: Styles.textStyle18.copyWith(
             fontStyle: FontStyle.italic,
             color: Colors.white.withValues( alpha: 0.7 ),
           ),
@@ -38,10 +40,30 @@ class BookDetailsViewBody extends StatelessWidget {
         ),
         const SizedBox(height: 40,),
         const BooksAction(),
+         const SizedBox(height: 60.0,),
+         Padding(
+           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+           child: Align(
+             alignment: Alignment.centerLeft,
+             child: Text(
+              'You can also like',
+              textAlign: TextAlign.center,
+              style: Styles.textStyle15.copyWith(
+                fontWeight: FontWeight.bold
+              ),
+                     ),
+           ),
+         ),
+        const SizedBox(height: 20,),
+        const SimilarBooksListView(),
+        const SizedBox(height: 40,),
       ],
     );
   }
 }
+
+
+
 
 
 

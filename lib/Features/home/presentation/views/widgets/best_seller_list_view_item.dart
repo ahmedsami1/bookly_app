@@ -16,7 +16,10 @@ class BestSellerListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding ,vertical: kDefaultPadding / 2.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: kDefaultPadding,
+          vertical: kDefaultPadding / 2.0,
+        ),
         child: SizedBox(
           height: 140,
           child: Row(
@@ -26,17 +29,15 @@ class BestSellerListViewItem extends StatelessWidget {
                 aspectRatio: 2.7 / 4,
                 child: Container(
                   decoration: BoxDecoration(
-                    image:  const DecorationImage(
+                    image: const DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage(
-                        AssetsData.test,
-                      ),
+                      image: AssetImage(AssetsData.test),
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ),
-              const SizedBox(width: 30,),
+              const SizedBox(width: 30),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,25 +49,23 @@ class BestSellerListViewItem extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle20.copyWith(
-                            fontFamily: kGtSectraFine
+                          fontFamily: kGtSectraFine,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 3,),
+                    const SizedBox(height: 3),
                     Text(
                       'J.K. Rowling',
-                      style: Styles.textStyle15.copyWith(
-                          color: Colors.grey
-                      ),
+                      style: Styles.textStyle15.copyWith(color: Colors.grey),
                     ),
-                    const SizedBox(height: 3,),
+                    const SizedBox(height: 3),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           '19.99 €',
                           style: Styles.textStyle20.copyWith(
-                              fontWeight: FontWeight.bold
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         const BookRating(),
@@ -82,5 +81,3 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
-
-

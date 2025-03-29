@@ -5,7 +5,6 @@ import 'package:bookly_app/core/utils/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
   @override
@@ -19,33 +18,20 @@ class HomeViewBody extends StatelessWidget {
             children: [
               CustomAppBar(),
               FeaturedBooksListView(),
-              SizedBox(height: 40,),
+              SizedBox(height: 40),
               Padding(
-                padding: EdgeInsets.only(left: kDefaultPadding, right: kDefaultPadding,),
-                child: Text(
-                  'Best Seller',
-                  style: Styles.textStyle18,
+                padding: EdgeInsets.only(
+                  left: kDefaultPadding,
+                  right: kDefaultPadding,
                 ),
+                child: Text('Best Seller', style: Styles.textStyle18),
               ),
-              SizedBox(height: 20,),
-            ]
+              SizedBox(height: 20),
+            ],
           ),
         ),
-        SliverFillRemaining(
-          child: BestSellerListView(),
-        ),
+        SliverFillRemaining(child: BestSellerListView()),
       ],
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -14,29 +14,24 @@ class BookDetailsSection extends StatelessWidget {
     return Column(
       children: [
         const CustomBookDetailsAppBar(),
-        const SizedBox(height: 10,),
+        const SizedBox(height: 10),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.28),
           child: const CustomBookImage(),
         ),
-        const SizedBox(height: 20,),
-        const Text(
-          'The Jungle Book',
-          style: Styles.textStyle30,
-        ),
-        const SizedBox(height: 5,),
+        const SizedBox(height: 20),
+        const Text('The Jungle Book', style: Styles.textStyle30),
+        const SizedBox(height: 5),
         Text(
           'Rudyard Kipling',
           style: Styles.textStyle18.copyWith(
             fontStyle: FontStyle.italic,
-            color: Colors.white.withValues( alpha: 0.7 ),
+            color: Colors.white.withValues(alpha: 0.7),
           ),
         ),
-        const SizedBox(height: 10,),
-        const BookRating(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
-        const SizedBox(height: 40,),
+        const SizedBox(height: 10),
+        const BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        const SizedBox(height: 40),
         const BooksAction(),
       ],
     );

@@ -8,22 +8,20 @@ class SimilarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:  const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Text(
             'You can also like',
             textAlign: TextAlign.center,
-            style: Styles.textStyle15.copyWith(
-                fontWeight: FontWeight.bold
-            ),
+            style: Styles.textStyle15.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(height: 20),
         const SimilarBooksListView(),
-        const SizedBox(height: 40,),
+        const SizedBox(height: 40),
       ],
     );
   }

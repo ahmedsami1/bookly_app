@@ -6,37 +6,36 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.backgroundColor,
     required this.textColor,
-     this.borderRadius,
+    this.borderRadius,
     required this.text,
-     this.fontSize,
+    this.fontSize,
   });
   final Color backgroundColor;
   final Color textColor;
   final BorderRadius? borderRadius;
   final double? fontSize;
-  final String text ;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 55.0,
-      width:  MediaQuery.of(context).size.width * 0.25,
+      width: MediaQuery.of(context).size.width * 0.25,
       child: TextButton(
-          onPressed: () {},
+        onPressed: () {},
         style: TextButton.styleFrom(
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: borderRadius?? BorderRadius.circular(16.0),
+            borderRadius: borderRadius ?? BorderRadius.circular(16.0),
           ),
         ),
-          child: Text(
-                text,
-                style: Styles.textStyle20.copyWith(
-                  color: textColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: fontSize,
-                ),
-              ),
-
+        child: Text(
+          text,
+          style: Styles.textStyle20.copyWith(
+            color: textColor,
+            fontWeight: FontWeight.bold,
+            fontSize: fontSize,
+          ),
+        ),
       ),
     );
   }

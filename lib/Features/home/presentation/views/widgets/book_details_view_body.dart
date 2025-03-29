@@ -8,7 +8,6 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return const CustomScrollView(
       physics: BouncingScrollPhysics(),
       slivers: [
@@ -17,10 +16,7 @@ class BookDetailsViewBody extends StatelessWidget {
           child: Column(
             children: [
               BookDetailsSection(),
-              Expanded(
-                  child: SizedBox(
-                    height: 60.0,),
-              ),
+              Expanded(child: SizedBox(height: 60.0)),
               SimilarBooksSection(),
             ],
           ),
@@ -29,13 +25,3 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-

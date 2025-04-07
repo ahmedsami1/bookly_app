@@ -7,8 +7,8 @@ import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({
+class NewestBooksListViewItem extends StatelessWidget {
+  const NewestBooksListViewItem({
     super.key,
     required this.bookModel,
   });
@@ -31,7 +31,7 @@ class BestSellerListViewItem extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+              CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
               const SizedBox(width: 30),
               Expanded(
                 child: Column(

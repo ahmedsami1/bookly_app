@@ -25,10 +25,10 @@ class SimilarBooksListView extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
-                itemCount: 10,
+                itemCount: state.books.length,
                 itemBuilder: (context, index) {
-                  return const CustomBookImage(
-                    imageUrl: 'https://play.google.com/books/publisher/content/images/frontcover/JcV3EAAAQBAJ?fife=w480-h690',
+                  return  CustomBookImage(
+                    imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
                   );
                 },
               ),

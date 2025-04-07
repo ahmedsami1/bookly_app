@@ -9,18 +9,18 @@ class CustomBookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 2.7 / 4,
-      child: Container(
-        margin: const EdgeInsets.only(right: 10.0),
-        decoration: BoxDecoration(
+      child: Padding(
+        padding: const EdgeInsets.only(right: 14.0),
+        child: ClipRRect(
           borderRadius: BorderRadius.circular(16.0),
-        ),
-        child: CachedNetworkImage(
-          imageUrl: imageUrl,
-          fit: BoxFit.fill,
-          filterQuality: FilterQuality.high,
-          errorWidget: (context, url, error) => const Icon(Icons.error),
-          placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+          child: CachedNetworkImage(
+            imageUrl: imageUrl,
+            fit: BoxFit.fill,
+            filterQuality: FilterQuality.high,
+            errorWidget: (context, url, error) => const Icon(Icons.error_outline_outlined),
+            placeholder: (context, url) => const Center(child: CircularProgressIndicator(color: Colors.white,)),
 
+          ),
         ),
       ),
     );

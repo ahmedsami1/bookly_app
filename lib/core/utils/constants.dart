@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-const kPrimaryColor = Color(0xFF100B20);
+const kPrimaryColor = Color(0xFF011b2c);
 
 const kTransitionDuration = Duration(milliseconds: 250);
 

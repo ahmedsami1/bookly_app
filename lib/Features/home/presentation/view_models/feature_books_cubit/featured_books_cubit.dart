@@ -7,17 +7,17 @@ import 'package:flutter/material.dart';
 part 'featured_books_state.dart';
 
 class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
-  FeaturedBooksCubit(this.homeRepo) : super(FeatureBooksInitial());
+  FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitial());
 
   final HomeRepo homeRepo;
 
   Future<void> fetchFeaturedBooks() async {
-    emit(FeatureBooksLoading());
+    emit(FeaturedBooksLoading());
     var result = await homeRepo.fetchFeatureBooks();
     result.fold((failure) {
-      emit(FeatureBooksFailure(failure.errorMessage));
+      emit(FeaturedBooksFailure(failure.errorMessage));
     }, (books) {
-      emit(FeatureBooksSuccess(books));
+      emit(FeaturedBooksSuccess(books));
     });
   }
 

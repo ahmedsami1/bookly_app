@@ -17,7 +17,9 @@ class SimilarBooksListView extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           itemCount: 10,
           itemBuilder: (context, index) {
-            return const CustomBookImage();
+            return const CustomBookImage(
+              imageUrl: 'https://play.google.com/books/publisher/content/images/frontcover/JcV3EAAAQBAJ?fife=w480-h690',
+            );
           },
         ),
       ),

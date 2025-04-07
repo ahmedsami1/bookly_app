@@ -23,7 +23,7 @@ class NewestBooksListView extends StatelessWidget {
             },
           );
         }else if(state is NewsBooksFailure) {
-          return CustomErrorWidget(errorMessage: state.errorMessage);
+          return CustomErrorWidget(errMessage: state.errorMessage);
         }else {
           return const CustomLoadingIndicator();
         }

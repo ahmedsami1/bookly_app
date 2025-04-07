@@ -16,7 +16,7 @@ class FeaturedBooksListView extends StatelessWidget {
         builder: (context, state) {
           if (state is FeaturedBooksSuccess) {
             return SizedBox(
-              height: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height * 0.27,
               child: ListView.builder(
                 padding: EdgeInsets.zero,
                 scrollDirection: Axis.horizontal,
@@ -33,7 +33,7 @@ class FeaturedBooksListView extends StatelessWidget {
           } else if (state is FeaturedBooksFailure) {
             return Text(state.errMessage);
           } else {
-            return const Center(child: CustomLoadingIndicator());
+            return const CustomLoadingIndicator();
           }
         },
       ),

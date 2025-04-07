@@ -6,8 +6,8 @@ import 'package:equatable/equatable.dart';
 
 part 'news_books_state.dart';
 
-class NewsBooksCubit extends Cubit<NewsBooksState> {
-  NewsBooksCubit(this.homeRepo) : super(NewsBooksInitial());
+class NewestBooksCubit extends Cubit<NewsBooksState> {
+  NewestBooksCubit(this.homeRepo) : super(NewsBooksInitial());
 
   final HomeRepo homeRepo;
   Future<void> fetchNewestBooks() async{

@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/home/presentation/view_models/news_books_cubit/news_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
+import 'package:bookly_app/core/widgets/custom_error_widget.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +10,7 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NewsBooksCubit, NewsBooksState>(
+    return BlocBuilder<NewestBooksCubit, NewsBooksState>(
       builder: (context, state) {
         if(state is NewsBooksSuccess) {
           return ListView.builder(
@@ -22,7 +23,7 @@ class BestSellerListView extends StatelessWidget {
             },
           );
         }else if(state is NewsBooksFailure) {
-          return Text(state.errorMessage);
+          return CustomErrorWidget(errorMessage: state.errorMessage);
         }else {
           return const CustomLoadingIndicator();
         }

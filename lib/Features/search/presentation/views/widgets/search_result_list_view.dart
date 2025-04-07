@@ -8,7 +8,7 @@ class SearchResultListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NewsBooksCubit, NewsBooksState>(
+    return BlocBuilder<NewestBooksCubit, NewsBooksState>(
       builder: (context, state) {
         if (state is NewsBooksSuccess) {
           return ListView.builder(
